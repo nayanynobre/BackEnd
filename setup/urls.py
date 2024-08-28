@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from todos.views import home  # Importe a view 'home'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),  # Rota para o admin do Django
+    path('', home, name='home'),      # Rota para a página inicial
 ]
